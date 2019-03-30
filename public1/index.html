@@ -1,0 +1,26 @@
+<div>
+    <h1>Page 1</h1>
+    <button id="post">Post</button>
+    <button id="put">Put</button>
+
+    <script>
+        function requestHandler(method) {
+            return () => {
+                fetch('http://localhost:8080/data', {
+                    method,
+                    mode: 'cors',
+                })
+                .then(res => res.json())
+                .then(res => {
+                    console.log(res);
+                })
+            }
+        }
+
+        const postButton = document.getElementById('post');
+        const putButton = document.getElementById('put');
+
+        postButton.addEventListener('click', requestHandler('POST'));
+        putButton.addEventListener('click', requestHandler('PUT'));
+    </script>
+</div>

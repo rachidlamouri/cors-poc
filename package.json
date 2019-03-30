@@ -1,0 +1,12 @@
+{
+  "name": "cors-tutorial",
+  "version": "1.0.0",
+  "scripts": {
+    "start1": "nodemon server1.js",
+    "start2": "nodemon server2.js"
+  },
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.16.4"
+  }
+}
